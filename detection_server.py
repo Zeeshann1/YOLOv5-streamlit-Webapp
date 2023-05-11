@@ -1,5 +1,6 @@
 import torch
 import cv2
+import torchvision
 from flask import Flask, request, jsonify
 from io import BytesIO
 import base64

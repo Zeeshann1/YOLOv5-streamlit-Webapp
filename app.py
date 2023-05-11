@@ -1,8 +1,7 @@
 import streamlit as st
+import detection_server
 import requests
 import json
-import cv2
-
 
 # Streamlit app header and description
 st.title("YOLOv5 Object Detection")

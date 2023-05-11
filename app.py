@@ -14,7 +14,7 @@ if uploaded_image is not None:
     # Send image to detection endpoint
     files = {'file': uploaded_image.getvalue()}
     response = requests.post('http://localhost:8501/detect', files=files)
-
+    st.write(response.status_code)
     # Check if the request was successful
     if response.status_code == 200:
         # Parse the response

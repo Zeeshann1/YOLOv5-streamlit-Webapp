@@ -1,4 +1,5 @@
 import torch
+import app
 import cv2
 import torchvision
 from flask import Flask, request, jsonify

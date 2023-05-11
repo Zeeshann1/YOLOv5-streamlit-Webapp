@@ -6,8 +6,7 @@ import base64
 from PIL import Image
 
 # Load YOLOv5 model
-#model = torch.hub.load('ultralytics/yolov5', 'yolov5s', pretrained=True)
-model = yolov5s
+model = torch.hub.load('yolov5s', pretrained=True)
 model.conf = 0.35  # NMS confidence threshold
 model.iou = 0.45  # NMS IoU threshold
 model.agnostic = False  # NMS class-agnostic

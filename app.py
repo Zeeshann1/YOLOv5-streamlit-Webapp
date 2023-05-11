@@ -1,5 +1,5 @@
 import streamlit as st
-import detection_server
+from YOLOv5-streamlit-Webapp import detection_server
 import requests
 import json
 

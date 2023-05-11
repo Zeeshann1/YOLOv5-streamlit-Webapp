@@ -13,10 +13,8 @@ if uploaded_image is not None:
     # Send image to detection endpoint
     files = {'file': uploaded_image.getvalue()}
     response = requests.post('http://localhost:8501/detect', files=files)
-
-    if response.status_code == 200:
-        # Parse the response
-        results = json.loads(response.text)
+    # Parse the response
+    results = json.loads(response.text)
 
         # Display the detected objects
         for obj in results['objects']:

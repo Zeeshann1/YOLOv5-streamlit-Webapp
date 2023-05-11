@@ -1,5 +1,5 @@
 import streamlit as st
-from Zeeshann1/YOLOv5-streamlit-Webapp/edit/main import detection_server
+#from Zeeshann1/YOLOv5-streamlit-Webapp/edit/main import detection_server
 import requests
 import json
 

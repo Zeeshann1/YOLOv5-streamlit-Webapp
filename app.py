@@ -13,13 +13,14 @@ if uploaded_image is not None:
     # Send image to detection endpoint
     files = {'file': uploaded_image.getvalue()}
     response = requests.post('http://localhost:8501/detect', files=files)
+
     # Parse the response
     results = json.loads(response.text)
 
-        # Display the detected objects
-        for obj in results['objects']:
-            st.write("Class:", obj['class'])
-            st.write("Confidence:", obj['confidence'])
-            st.image(obj['image'], use_column_width=True)
-    else:
-        st.error("Error occurred during object detection.")
+    # Display the detected objects
+    for obj in results['objects']:
+        st.write("Class:", obj['class'])
+        st.write("Confidence:", obj['confidence'])
+        st.image(obj['image'], use_column_width=True)
+else:
+    st.error("Error occurred during object detection.")

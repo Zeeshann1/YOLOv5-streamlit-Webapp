@@ -16,7 +16,7 @@ if uploaded_image is not None:
     response = requests.post('http://localhost:8501/detect', files=files)
     st.write(response.status_code)
     # Check if the request was successful
-    if response.status_code == 200:
+    if response.status_code == 405:
         # Parse the response
         results = json.loads(response.text)
 
